@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Galaxy</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="loading">LOADING...</div>
+    <div id="navBar">
+      <button class="nav-btn active" data-mode="galaxy">Galaxy</button>
+      <button class="nav-btn" data-mode="blackhole">Black Hole</button>
+      <button class="nav-btn" data-mode="planets">Solar System</button>
+    </div>
+
+    <div id="overlay">
+      <h1 id="overlayTitle">Space Explorer</h1>
+
+      <p id="overlaySub">Drag to rotate • Scroll to zoom</p>
+    </div>
+
+    <div id="shapeLabel">Spiral Galaxy</div>
+    <div id="colorPanel">
+      <div class="cp-row">
+        <label>Core</label>
+
+        <input type="color" id="cpCore" value="#ffffff" />
+      </div>
+
+      <div class="cp-row">
+        <label>Glow</label>
+
+        <input type="color" id="cpMid" value="#6ee7ff" />
+      </div>
+
+      <div class="cp-row">
+        <label>Edge</label>
+
+        <input type="color" id="cpEdge" value="#1450a8" />
+      </div>
+
+      <div class="cp-presets">
+        <button
+          class="cp-swatch"
+          style="background: linear-gradient(90deg, #fff, #6ee7ff, #1450a8)"
+          data-core="#ffffff"
+          data-mid="#6ee7ff"
+          data-edge="#1450a8"
+          title="Cyan"
+        ></button>
+        <button
+          class="cp-swatch"
+          style="background: linear-gradient(90deg, #fff, #ff6ec7, #7a0e6e)"
+          data-core="#ffffff"
+          data-mid="#ff6ec7"
+          data-edge="#7a0e6e"
+          title="Pink"
+        ></button>
+        <button
+          class="cp-swatch"
+          style="background: linear-gradient(90deg, #fff, #b388ff, #3a0ca3)"
+          data-core="#ffffff"
+          data-mid="#b388ff"
+          data-edge="#3a0ca3"
+          title="Purple"
+        ></button>
+        <button
+          class="cp-swatch"
+          style="background: linear-gradient(90deg, #fff, #ffd166, #a85200)"
+          data-core="#ffffff"
+          data-mid="#ffd166"
+          data-edge="#a85200"
+          title="Gold"
+        ></button>
+        <button
+          class="cp-swatch"
+          style="background: linear-gradient(90deg, #fff, #6effa3, #0a6e3a)"
+          data-core="#ffffff"
+          data-mid="#6effa3"
+          data-edge="#0a6e3a"
+          title="Green"
+        ></button>
+        <button
+          class="cp-swatch"
+          style="background: linear-gradient(90deg, #fff, #ff6e6e, #7a0e0e)"
+          data-core="#ffffff"
+          data-mid="#ff6e6e"
+          data-edge="#7a0e0e"
+          title="Purple"
+        ></button>
+      </div>
+    </div>
+
+    <div id="planetMenu"></div>
+    <div id="planetInfo">
+      <h2 id="piName">-</h2>
+
+      <div class="au" id="piAu">-</div>
+
+      <p id="piFact">-</p>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="../js/script.js"></script>
+  </body>
+</html>
